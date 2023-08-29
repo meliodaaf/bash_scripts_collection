@@ -4,8 +4,8 @@
 # gpg -o safe_file.gpg -e passwords.txt
 
 # Content of passwords.txt
-# export USER="Clarence"
-# export PASS="mypassword123"
+# export USER="CLARENCESUBIA"; export PASS="SUBIACLARENCE"
+
 
 
 # The /tmp/.$UID is a temporary placeholder for the decrypted file
@@ -18,7 +18,7 @@ fi
 # Format of the file is export PASS=mypassword123
 # File is encrypted using command below:
 # gpg --output safe_file.gpg --encrypt --recipient subiaclarence96@gmail.com passwords.txt
-gpg -o /tmp/.$UID -d -r subiaclarence96@gmail.com safe_file.gpg &>/dev/null
+gpg -o /tmp/.$UID -d -r ramentosubia11@gmail.com safe_file.gpg &>/dev/null
 
 # Source the decrypted file so it can be exported as variable
 source /tmp/.$UID
