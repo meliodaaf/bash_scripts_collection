@@ -16,11 +16,11 @@ function spawn_keys {
 
 function walker {
     # SNMPWALK Command
-    snmp_walk_command="snmpwalk -v 3 -l authPriv -u AUTHPRIV -a md5 \
-    -A $AUTHENKEY -x des \
-    -X $PRIVKEY \
+    snmp_walk_command="snmpwalk -v 3 -l authPriv -u AUTHPRIV -a sha \
+    -A MYAUTHKEYS!!! -x aes \
+    -X MYPRIVKEYS!!! \
     $HOST \
-    iso.3.6.1.2.1.1.1.0"
+    iso.3.6.1.2.1.1.5.0"
 
     # Execute the SNMP walk command
     eval "$snmp_walk_command"
